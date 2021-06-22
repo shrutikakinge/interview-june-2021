@@ -8,6 +8,28 @@ Sample Input:  if a given number is <b>35</b>, the method should return <b>10001
 
 write your code under <b> src/main/java/exam/ConvertToBinary#toBinary() - (3) Marks.</b> method
 
+public class DecimalToBinary
+{    
+    public static void toBinary(int decimal)
+    {    
+      int binary[] = new int[40];    
+      int index = 0;    
+      while(decimal > 0){    
+        binary[index++] = decimal%2;    
+        decimal = decimal/2;    
+     }    
+      for(int i = index-1;i >= 0;i--){    
+       System.out.print(binary[i]);    
+     }    
+}    
+public static void main(String args[])
+{      
+   Scanner sc= new Scanner(System.in);      
+  System.out.println("Enter first number- ");  
+  int decimal= sc.nextInt();   
+   toBinary(decimal);     
+}}  
+
 ----------------
 
 Write the implementation of a method which takes an integer array and it shifts all the elements to one right 
